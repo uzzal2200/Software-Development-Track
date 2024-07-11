@@ -1,0 +1,119 @@
+
+.title{
+    color:rgba(139, 112, 112, 0.8);
+    font-size:60px;
+    font-weight:700;
+    font-style:italic;
+    text-align:left;
+    background: linear-gradient(45deg,blue,red);
+
+}
+.description{
+    color:blue;
+    line-height:1.5em;
+}
+#test{
+    color:blue;
+
+}
+p{
+    color:blue;
+
+/* }
+.box{
+    width:300px;
+    height:300px;
+    border:5px dotted black;
+    /* padding-left:30px;
+    padding-top:30px; */
+    /* padding:70px;  char dike bojai specific top left right down dike dite parbo */
+    /* margin:70px; ata same */
+    /* margin-top:50; */
+    /* background-color:blue;
+    box-shadow:4px 40px 88px gray; */
+} */
+
+
+.test{
+    padding:50px;
+    background-color: blue;
+    border:1px solid black;
+    width:50%;
+    margin:auto;
+}
+.child{
+    padding:30px;
+    background-color: green;
+    width:50%;
+    height:100vh; /* vertical height (vh)*/
+
+}
+.first{
+    /* display:inline; */
+    width:200px;
+    height:150px;
+    background-color: gold;
+    float:left;
+
+
+}
+.second{
+    /* display:inline; inline mane lekha duita pasha pashi thakbe */
+    /* display:block;  block mane line ta nise nise ashbe */
+    width:200px;
+    height:150px;
+    background-color: ;
+    float:left;
+}
+.box{
+    width:200px;
+    height:150px;
+    border:1px solid black;
+    /* margin:5px; */
+    font-size:25px;
+
+}
+.container{
+    display:flex;
+    justify-content:center;
+    /* justify-content:space-around;
+    justify-content:space-evenly;
+    justify-content:space-between; */
+    gap:10px;
+    flex-direction: row-reverse;
+    height:100vh;
+    align-items:center;
+    flex-wrap:wrap;
+
+}
+.box1{
+    background-color:blue;
+    position:absolute;
+    /* z-index: -1; */
+}
+.box2{
+    background-color:red;
+    position:fixed;
+    /* position:sticky; */
+
+}
+.box3{
+    background-color: gray;
+    margin-top: 20px;
+}
+.green{
+    width:400px;
+    height:200px;
+    background-color:green;
+    margin:50px;
+    position:relative;
+}
+.red{
+    width:120px;
+    height: 120px;
+    background-color:red;
+    border-radius: 60px;
+    position:absolute;
+    top: 25%;
+    left:32%;
+}

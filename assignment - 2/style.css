@@ -1,0 +1,320 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: auto;
+    padding: 5px 45px;
+    
+}
+
+.sort_bts {
+    padding: 5px 30px;
+    color: #242425;
+    font-size: 25px;
+    border-radius: 6px;
+    border: none;
+}
+
+.blog_btn {
+    border: none;
+    font-size: 25px;
+    padding: 2px 19px;
+    border-radius: 6px;
+    background-color: #ff1f3d;
+    text-align: center;
+}
+.blog_btn a{
+    text-decoration: none;
+    color: white;
+}
+.button_class{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+.Btn{
+    background-color: #dedfde;
+    color: #5d5c5c;
+    border-radius: 6px;
+    padding: 5px 20px;
+    border: none;
+    font-size: 25px;
+    
+}
+
+#Items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.img_box{
+    width: 312px;
+    height: 200px;
+    border-radius: 6px;
+}
+.Profie_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.AuthorInfo{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0px; 
+}
+.VerifiedProfile{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+.Drawing_class{
+    width: 533px;
+    height: 256px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 220px 40px;
+    text-align: center;
+    margin-left: 450px;
+}
+.Empty_img{
+    width: 140px;
+    height: 140px;
+}
+.post_time{
+    color: white;
+    padding:168px 7px;
+    text-align: right;
+}
+.Time_post{
+    background-color: black;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-top: 100px;
+}
+.empty{
+    background-color: white;
+}
+@media(max-width:464px){
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .NavBar{
+        display: flex;
+        
+    }
+    .sort_bts {
+        padding: 3px 20px;
+        color: #242425;
+        font-size: 20px;
+        border-radius: 6px;
+        border: none;
+    }
+    
+    .blog_btn {
+        display: none;
+        border: none;
+        font-size: 20px;
+        padding: 2px 19px;
+        border-radius: 6px;
+        background-color: #ff1f3d;
+        text-align: center;
+    }
+    .blog_btn a{
+        text-decoration: none;
+        color: white;
+    }
+    .button_class{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;  
+    }
+    .Btn{
+        background-color: #dedfde;
+        color: #5d5c5c;
+        border-radius: 6px;
+        padding: 2.5px 10px;
+        border: none;
+        font-size: 25px;
+    }
+    
+    #Items {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-left: 6px;
+    }
+    .img_box{
+        width: 312px;
+        height: 200px;
+        border-radius: 6px;
+    }
+    .Profie_img{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .AuthorInfo{
+        display: flex;
+        gap: 10px;
+        padding: 20px 0px; 
+    }
+    .VerifiedProfile{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+    .Drawing_class{
+        width: 533px;
+        height: 256px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 220px 40px;
+        text-align: center;
+        margin-left: 450px;
+    }
+    .Empty_img{
+        width: 140px;
+        height: 140px;
+    }
+    .post_time{
+        color: white;
+        padding:168px 7px;
+        text-align: right;
+    }
+    .Time_post{
+        background-color: black;
+        padding: 3px 8px;
+        border-radius: 6px;
+        margin-top: 100px;
+    }
+    .empty{
+        background-color: white;
+    }
+}
+@media(max-width:412px){
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .NavBar{
+        display: flex;
+        
+    }
+    .sort_bts {
+        padding: 3px 20px;
+        color: #242425;
+        font-size: 20px;
+        border-radius: 6px;
+        border: none;
+    }
+    
+    .blog_btn {
+        display: none;
+        border: none;
+        font-size: 20px;
+        padding: 2px 19px;
+        border-radius: 6px;
+        background-color: #ff1f3d;
+        text-align: center;
+    }
+    .blog_btn a{
+        text-decoration: none;
+        color: white;
+    }
+    .button_class{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;  
+    }
+    .Btn{
+        background-color: #dedfde;
+        color: #5d5c5c;
+        border-radius: 6px;
+        padding: 2.5px 10px;
+        border: none;
+        font-size: 25px;
+    }
+    
+    #Items {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-left: 6px;
+    }
+    .img_box{
+        width: 312px;
+        height: 200px;
+        border-radius: 6px;
+    }
+    .Profie_img{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .AuthorInfo{
+        display: flex;
+        gap: 10px;
+        padding: 20px 0px; 
+    }
+    .VerifiedProfile{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+    .Drawing_class{
+        width: 533px;
+        height: 256px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 220px 40px;
+        text-align: center;
+        margin-left: 450px;
+    }
+    .Empty_img{
+        width: 140px;
+        height: 140px;
+    }
+    .post_time{
+        color: white;
+        padding:168px 7px;
+        text-align: right;
+    }
+    .Time_post{
+        background-color: black;
+        padding: 3px 8px;
+        border-radius: 6px;
+        margin-top: 100px;
+    }
+    .empty{
+        background-color: white;
+    }
+}

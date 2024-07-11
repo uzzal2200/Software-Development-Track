@@ -1,0 +1,44 @@
+*{
+    padding : 0;
+    margin : 0;
+}
+ /* .banner-container{
+    height : 100vh;
+    background-image: url(./image/background.jpg),linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4));
+    background-blend-mode: overlay ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} 
+ 
+ .practice{
+    height : 10o0vh;
+    background-image:url(./image/banner-shape-1.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width : 70%;
+    margin-top : 20%;
+    text-align: center;
+}
+.pic{
+    width : 70%
+} */
+.title{
+    color : blue;
+    font-size : 45px;
+    font-weight : 700;
+
+}
+@media only screen and (max-width : 480px) {
+    .title{
+        color : green;
+        
+    }
+}
+@media only screen and (max-width : 480px) and (max-width : 768){
+    .title{
+        color : navy;
+        font-size : 80px;
+    }
+}

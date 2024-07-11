@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="padding-top:100px ; background-image: url(images/star-bg.svg); background-color: black; height: 100vh; width: 100%;">
+    <div class="row d-flex">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Discuss the scope of var, let, and const
+    </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+    <strong class="tes">Var : <br></strong> Var used to declare variables. It has a broader scope, making it accessible throughout the function or globally if declared outside a function. However, it lacks block-level scoping, potentially leading to unintended variable redeclaration or side effects. <br>
+    <strong class="tes">Let : <br></strong> Hosted at top of some private scope and only avalable after assighning value, we cannot Redeclare it in the same scope <br>
+    <strong class="tes">Const : <br></strong>It can be block scoped or gloablly scoped,it cannot assigned winin scope and also cannot redeclare within scope.the value cannot be changed.
+    </div>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Tell us the use cases of null and undefined
+    </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+            Null in JavaScript signifies the intentional absence of a meaningful value and is considered a primitive data type. When a variable is assigned the value null, it essentially holds no useful informati
+            On the other hand, Undefined indicates that a variable has been declared but hasn't yet been assigned any specific value, serving as the default state for uninitialized variables in JavaScript.
+    </div>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What do you mean by REST API?
+    </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+          REST, which stands for Representational State Transfer, is an architectural style used in the design of networked applications. A REST API, short for Application Programming Interface, encompasses a set of rules and conventions guiding the creation and interaction with web services. These guidelines adhere to the fundamental principles of REST.
+    </div>
+    </div>
+    </div>
+    </div>
+    <button class="btn btn-success w-100 mt-5 blog_btn " > <a href="./index.html"> Back To Home</a></button>
+    </div>
+    <div class="col-md-4 "></div>
+            
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

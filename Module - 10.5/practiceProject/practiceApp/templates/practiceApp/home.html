@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is my Practice App</h1>
+
+    <h1>Join Filter</h1>
+    {{ lst | join:"-"}}
+
+    <h1>Date Filter</h1>
+    {{Today | date:"D d M Y"}}
+
+    <h1>Date Filter</h1>
+    {{Today | date:"SHORT_DATE_FORMAT"}}
+
+    <h1>Date Filter</h1>
+    {{Today | date }}
+
+    <h1>Default Filter</h1>
+    {{ val | default:"an empty String"}}
+
+    <h1>Add Filter</h1>
+    {{ addValue | add:"20"}}
+
+    <h1>Capfirst Filter</h1>
+    {{cap | capfirst}}
+
+    <h1>Cut Filter</h1>
+    {{ cutFilter1 | cut:" " }}
+
+    <h1>Cut Filter</h1>
+    {{ cutFilter2 | cut:"-" }}
+
+    <h1>Dictsort Filter</h1>
+    {{ Distsort | dictsort:"name" }}
+
+    <h1>Dictsort Filter</h1>
+    {{ Distsort | dictsort:"age" }}
+
+    <h1>Escape Filter</h1>
+    {{ Escape | escape}}
+
+    <h1>First Filter</h1>
+    {{ FirstFilter | first }}
+
+    <h1>Last Filter</h1>
+    {{ LastFilter | last }}
+
+    <h1>Length Filter</h1>
+    {{ FirstFilter | length }}
+
+    <h1>Linenumbers Filter</h1>
+    {{ LineNum | linenumbers }}
+
+    <h1>Lower Filter</h1>
+    {{ name | lower }}
+
+    <h1>Upper Filter</h1>
+    {{ name | upper }}
+
+    <h1>Title Filter</h1>
+    {{ TitleFilter | title }}
+
+    <h1>Random Filter</h1>
+    {{ RandomFilter | random }}
+
+    <h1>Slice Filter</h1>
+    {{ SliceFilter | slice:"1:2" }}
+
+    <h1>Time Filter</h1>
+    {{ TimeFilter | time:"H:i" }}
+
+    <h1>Time Filter</h1>
+    {{ TimeFilter | time:"H\h i\m" }}
+
+    <h1>Timesince Filter</h1>
+    {{ TimesinceFilter | timesince }}
+
+    <h1>Truncatechars Filter</h1>
+    {{ "The truncatechars filter is used to truncate a string if it is longer
+    than the specified number of characters." | truncatechars:50 }}
+
+    <h1>Truncatewords Filter</h1>
+    {{ "The truncatechars filter is used to truncate a string if it is longer
+    than the specified number of characters." | truncatewords:5 }}
+  </body>
+</html>

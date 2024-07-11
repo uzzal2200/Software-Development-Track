@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class='d-flex flex-wrap container'>
+
+        {%for i in meals%}
+            <div class="card m-3" style="width: 18rem;">
+                <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{i.strMeal}}</h5>
+                <p class="card-text">there are so many food,this is important for our life so we should eat food everytime</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

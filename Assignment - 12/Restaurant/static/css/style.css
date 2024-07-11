@@ -1,0 +1,101 @@
+
+.Nav_bar{
+    background-color: rgb(85, 12, 202);
+    padding: 0px 90px;
+    align-items: center;
+}
+.restaurant_logo{
+    color:white;
+    font-size: 35px;
+    
+}
+.restaurant_logo span{
+    font-size: 50px;
+}
+.Nav_button{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.Button{
+    border-radius: 7px;
+    padding: 6px 19px;
+    border: none;
+}
+.Button a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    color: green;
+}
+.footer_bar{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: rgb(42, 42, 42);
+    align-items: center;
+    justify-content: space-around;
+
+}
+.footer_logo{
+    color: white;
+}
+.footer_icon_main{
+    display: flex;
+    gap: 30px;
+}
+.footer_icon{
+    color: white;
+    font-size: 25px;
+    gap: 110px;
+}
+.menu_list{
+    color: white;
+    display: flex;
+    gap: 30px;
+}
+.menu_list li{
+    font-size: 20px;
+    list-style: none;
+}
+.footerLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.middle_img img{
+    width: 450px;
+    height: 330px;
+}
+.middle_info{
+    display: flex;
+    padding: 90px 0px;
+    justify-content: space-around;
+
+}
+.middle_title{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: 330px;
+    padding:0px 30px;
+}
+.meals_Item{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 90px;
+    gap: 40px;
+}
+.about_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 100px;
+    gap: 50px;
+}
+.about_info img{
+    width: 300px;
+    height: 300px;
+}
