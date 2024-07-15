@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extra Fields Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container" class="width:50%">
+        {% load crispy_forms_tags %}
+       
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h2>Extra Fields Form</h2>
+            {{form | crispy }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

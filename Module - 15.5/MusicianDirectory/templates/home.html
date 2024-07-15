@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+
+{% block contain %}
+
+<table class="table w-75 m-auto pt-5">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Musician Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Album Rating</th>
+        <th scope="col">Instrument Type</th>
+        <th scope="col">Album Name</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for show in data %}
+     <tr>
+        <th scope="row">{{show.id}}</th>
+        <td><a class="text-decoration-none text-black" href="{% url "musicEdit" show.music.id %}">{{show.music.First_Name}} {{show.music.Last_Name}}</a></td>
+        <td>{{show.music.Email}}</td>
+        <td>{{show.rating}}</td>
+        <td>{{show.music.Instrument}}</td>
+        <td>{{show.name}}</td>
+        <td>{{show.release_date}}</td>
+        <td><a class="btn btn-primary" href="{% url "edit_album" show.id %}">Edit</a> <a class="btn btn-danger" href="{% url "delete_album" show.id %}">Delete</a></td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+{% endblock contain %}
