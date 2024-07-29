@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block contain %}
+
+<table class="table w-75 m-auto pt-5">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Musician Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Album Rating</th>
+        <th scope="col">Instrument Type</th>
+        <th scope="col">Album Name</th>
+        <th scope="col">Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for show in data %}
+     <tr>
+        <th scope="row">{{show.id}}</th>
+        <td>{{show.music.First_Name}} {{show.music.Last_Name}}</td>
+        <td>{{show.music.Email}}</td>
+        <td>{{show.rating}}</td>
+        <td>{{show.music.Intrument}}</td>
+        <td>{{show.name}}</td>
+        <td>{{show.release_date}}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+{% endblock contain %}

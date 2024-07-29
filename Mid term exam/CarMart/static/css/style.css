@@ -1,0 +1,62 @@
+
+.Header{
+    gap: 40px;
+}
+.headerImage{
+    width: 700px;
+    height: 440px;
+}
+.CategoryButton{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 30px;
+    gap: 70px;
+}
+.CategoryButton a{
+    background-color: #ebd3bf;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px  40px;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    border-radius: 8px;
+}
+.CarDetails{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 50px;
+}
+.carImg img{
+    display: flex;
+    width: 900px;
+    padding-bottom: 50px;
+    
+}
+.carDetails{
+    padding: 50px 10px;
+}
+.commentbox{
+    width: 100%;
+    display: inline;
+    margin: auto;
+    border: 1px solid red;
+}
+.commentTime{
+    font-size: 15px;
+}
+.Purchased{
+    display: flex;
+    justify-content: center;
+}
+.Purchased h1{
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+}
+/* .profilepage{
+    display: flex;
+    justify-content: center;
+} */

@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block contain %}
+<div class="CarDetails">
+    <div class="carImg">
+        <img src="{{CarBrand.image.url}}" alt="Photo">
+    </div>
+    <div class="carDetails">
+        <h3>Model: {{CarBrand.name}}</h3>
+        <h4>Price: ${{CarBrand.price}}</h4>
+        <h4>Quantity:{{CarBrand.quantity}}</h4>
+        <h5>Discription: <br></h5>
+        <p>{{CarBrand.discription}}</p>
+        <h4>Brand:{{CarBrand.brand.CategoryName}}</h4>
+        {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" name="buy_car" value="Buy Now" class="btn btn-primary">
+        </form>
+        {% endif %}
+    </div>
+</div>
+<br>
+<div class="commentbox">
+    <div class="px-4">
+        <h1> Comments:</h1>
+        {% if comments %}
+        {% for cmnt in comments %}
+        <div class="card m-3" style="width: 65%;">
+            <div class="card-body">
+                <h4>{{cmnt.name}} <span class="commentTime">{{cmnt.date}}</span></h4>
+                <p>{{cmnt.comment}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="card m-3" style="width: 65%;">
+            <div class="card-body">
+                <h5>No Comments here....</h5>
+            </div>
+        </div>
+        {% endif %}
+        
+    </div>
+</div>
+<div>
+    <form action="" method="post" style="width: 50%;" class="px-5 ">
+        {% csrf_token %}
+        <h1>Comments Here:</h1>
+        {{commentForm | crispy }}
+
+        <input type="submit" value="Send" class="btn btn-primary">
+    </form>
+</div>
+{% endblock contain %}

@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block contain %}
+
+<div style="width: 90%; margin: auto;">
+  <div class="profilepage mt-4">
+    <h1>Profile Page</h1>
+  <a href="{% url "Update" %}" class="btn btn-warning">Edit Profile</a>
+  </div>
+  <br>
+  <div class="Purchased mt-5">
+    <h1>Purchased Car</h1>
+  </div>
+  <div class="d-flex flex-lg-wrap justify-content-center">
+      {% for car in purchased %}
+      <div class="card mb-3 m-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{car.car_model.image.url}}" class="img-fluid rounded-start" alt="Car Photo">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">Model: {{car.car_model.name}}</h4>
+          <h4 class="card-title">Price: ${{car.car_model.price}}</h4>
+          <h4 class="card-title">Brand: {{car.car_model.brand.CategoryName}}</h4>
+          <a href="{% url "carDetails" slug=car.car_model.slug %}" class="btn btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock contain %}

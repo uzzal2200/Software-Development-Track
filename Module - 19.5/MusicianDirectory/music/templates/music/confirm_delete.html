@@ -1,0 +1,13 @@
+
+{% extends "base.html" %} {% block contain %}
+<div class="d-flex flex-row justify-content-center align-items-center">
+  <form action="" method="post">
+    {% csrf_token %}
+    <h3 class="modal-title">Confirm Delete</h3>
+    <p>Are You Sure!!</p>
+    <input type="submit" value="Close" class="btn btn-secondary" />
+    <input type="submit" value="Delete" class="btn btn-warning" />
+  </form>
+</div>
+
+{% endblock contain %}
