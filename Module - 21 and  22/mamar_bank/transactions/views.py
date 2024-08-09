@@ -2,20 +2,31 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.utils import timezone
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.views import View
 from django.http import HttpResponse
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, TemplateView
 from transactions.constants import DEPOSIT, WITHDRAWAL,LOAN, LOAN_PAID
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
 from datetime import datetime
 from django.db.models import Sum
 from transactions.forms import (
     DepositForm,
     WithdrawForm,
     LoanRequestForm,
+    TransferForm,
 )
 from transactions.models import Transaction
+
+def send_transaction_email(user, amount, subject, template):
+        message = render_to_string(template, {
+            'user' : user,
+            'amount' : amount,
+        })
+        send_email = EmailMultiAlternatives(subject, '', to=[user.email])
+        send_email.attach_alternative(message, "text/html")
+        send_email.send()
 
 class TransactionCreateMixin(LoginRequiredMixin, CreateView):
     template_name = 'transactions/transaction_form.html'
@@ -64,7 +75,7 @@ class DepositMoneyView(TransactionCreateMixin):
             self.request,
             f'{"{:,.2f}".format(float(amount))}$ was deposited to your account successfully'
         )
-
+        send_transaction_email(self.request.user, amount, "Deposite Message", "transactions/deposite_email.html")
         return super().form_valid(form)
 
 
@@ -79,6 +90,9 @@ class WithdrawMoneyView(TransactionCreateMixin):
     def form_valid(self, form):
         amount = form.cleaned_data.get('amount')
 
+        if(self.request.user.account.balance < 0):
+            messages.error("Bank has gone bankrupt")
+
         self.request.user.account.balance -= form.cleaned_data.get('amount')
         # balance = 300
         # amount = 5000
@@ -88,8 +102,25 @@ class WithdrawMoneyView(TransactionCreateMixin):
             self.request,
             f'Successfully withdrawn {"{:,.2f}".format(float(amount))}$ from your account'
         )
-
+        
+        send_transaction_email(self.request.user, amount, "Withdrawal Message", "transactions/withdrawal_email.html")
         return super().form_valid(form)
+    
+def TransferMoney(request):
+    if request.method == 'POST':
+        form = TransferForm(request.POST)
+        
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Money transferred successfully!')
+            return redirect('home')
+        
+        else:
+            messages.error(request, 'Error in the transfer')
+    else:
+        form = TransferForm()
+
+    return render(request, 'transactions/transfer.html', {'form': form})
 
 class LoanRequestView(TransactionCreateMixin):
     form_class = LoanRequestForm
@@ -109,7 +140,7 @@ class LoanRequestView(TransactionCreateMixin):
             self.request,
             f'Loan request for {"{:,.2f}".format(float(amount))}$ submitted successfully'
         )
-
+        send_transaction_email(self.request.user, amount, "Loan Request Message", "transactions/loan_email.html")
         return super().form_valid(form)
     
 class TransactionReportView(LoginRequiredMixin, ListView):

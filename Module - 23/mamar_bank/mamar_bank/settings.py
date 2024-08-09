@@ -37,6 +37,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -105,6 +106,13 @@ DATABASES = {
         'PORT': env("DB_PORT"),
     }
 }
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgresql://mamarbank_hgei_user:76yYgLuzarFqMooy6oPt7Ea5wZhxoeD6@dpg-cqneko08fa8c73apfp00-a.oregon-postgres.render.com/mamarbank',
+        
+#     )
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
