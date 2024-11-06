@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="productDetails"></div>
+
+    <script>
+        const productId = new URLSearchParams(window.location.search).get('id');
+        fetch(`https://fakestoreapi.com/products/${productId}`)
+            .then(response => response.json())
+            .then(product => {
+                document.getElementById('productDetails').innerHTML = `
+                    <h1>${product.title}</h1>
+                    <img src="${product.image}" alt="${product.title}">
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                    <p>Category: ${product.category}</p>
+                `;
+            });
+    </script>
+</body>
+</html>
